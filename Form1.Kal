@@ -1,0 +1,131 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp4
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        public int Flag;
+        double a, b;
+        private void button9_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "7";
+        }
+
+        private void odin_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "1";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chislo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void plus_Click(object sender, EventArgs e)
+        {
+            Flag = 0;
+            znak.Text = "+";
+            a = Convert.ToDouble(tb.Text);
+            tb.Text = " ";
+        }
+
+        private void dva_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "2";
+        }
+
+        private void minus_Click(object sender, EventArgs e)
+        {
+            Flag = 1;
+            znak.Text = "-";
+            a = Convert.ToDouble(tb.Text);
+                tb.Text = " ";
+        
+        }
+
+        private void unnogenie_Click(object sender, EventArgs e)
+        {
+            Flag = 2;
+            znak.Text = "*";
+            a = Convert.ToDouble(tb.Text);
+            tb.Text = " ";
+        }
+
+        private void delenie_Click(object sender, EventArgs e)
+        {
+            Flag = 3;
+            znak.Text = "/";
+            a = Convert.ToDouble(tb.Text);
+            tb.Text = " ";
+        }
+
+        private void ochistka_Click(object sender, EventArgs e)
+        {
+            tb.Text = " ";
+            znak.Text = " ";
+            a = 0;
+            b = 0;
+        }
+
+        private void tri_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "3";
+        }
+
+        private void chetri_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "4";
+        }
+
+        private void pati_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "5";
+        }
+
+        private void shest_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "6";
+        }
+
+        private void vosem_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "8";
+        }
+
+        private void devet_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "9";
+        }
+
+        private void nol_Click(object sender, EventArgs e)
+        {
+            tb.Text = tb.Text + "0";
+        }
+
+        private void ravno_Click(object sender, EventArgs e)
+        {
+            b = Convert.ToDouble(tb.Text);
+            if (Flag == 0) tb.Text = Convert.ToString(a + b);
+            if (Flag == 1) tb.Text = Convert.ToString(a - b);
+            if (Flag == 2) tb.Text = Convert.ToString(a * b);
+            if (Flag == 3) tb.Text = Convert.ToString(a / b);
+        }
+    }
+}
