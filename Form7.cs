@@ -155,9 +155,36 @@ namespace WindowsFormsApp7
             Math.Exp(Convert.ToDouble(2));
         }
 
+        private void tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ravno_Click(object sender, EventArgs e)
         {
-            b = Convert.ToDouble(tb.Text); if (Flag == 0)
+            try
+            {
+                int x = 5;
+                int y = x / 0;
+                tb.Text = y.ToString();
+            }
+            catch (DivideByZeroException)
+            {
+                MessageBox.Show("Произошло деление на ноль", "Ошибка");
+            }
+            finally
+            {
+
+            }
+
+            b = Convert.ToDouble(tb.Text);
+        
+            if (Flag == 0)
             {
                 tb.Text = Convert.ToString(a + b); //действия функций}
                 if (Flag == 1)
